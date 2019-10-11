@@ -19,11 +19,11 @@ function SmurfFormDataGet({ errors, touched, status, setStatus }) {
       })
     }, [])
 
-    // useEffect(() => {
-    //   if (status) {
-    //     setSmurfs([...smurfs, status]);
-    //   }
-    // }, [status]);
+    useEffect(() => {
+      if (status) {
+        setSmurfs([...smurfs, status]);
+      }
+    }, [status]);
     return (
         <>
         <SmurfContext.Provider value={{ smurfs }}>
